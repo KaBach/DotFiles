@@ -114,4 +114,18 @@ if ! shopt -oq posix; then
 fi
 
 # Add commands for EBI cluster
-alias ebigate='ssh -X -l kbach -p 2222 gate.ebi.ac.uk'
+alias ebigate='ssh -X -l kbach -p 2244 ligate.ebi.ac.uk'
+alias cigate='ssh -X bach01@ssh.cruk.cam.ac.uk'
+alias cftp='lftp -u jmlabadmin,Schrikslduun5 ftp2.cruk.cam.ac.uk'
+
+# added by Anaconda2 4.3.1 installer
+#export PATH="/home/karsten/anaconda2/bin:$PATH"
+
+# added by Anaconda3 installer
+#export PATH="/home/karsten/anaconda3/bin:$PATH"
+
+# added by Anaconda3 installer
+#export PATH="$PATH:/home/karsten/anaconda3/bin"
+#export GOPATH=${HOME}/go
+#export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+#. /home/karsten/anaconda3/etc/profile.d/conda.sh

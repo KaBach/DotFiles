@@ -11,8 +11,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
 Plugin 'xuhdev/vim-latex-live-preview'
-"Plugin 'jalvesaq/R-Vim-runtime'
+Plugin 'benmills/vimux'
+Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'jalvesaq/Nvim-R'
+Plugin 'jalvesaq/vimcmdline'
+Plugin 'davidhalter/jedi-vim'
 "for python
 "Plugin 'tmhedberg/SimpylFold'
 "Plugin 'vim-scripts/indentpython.vim'
@@ -144,6 +147,9 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevel=99
 
+" Enable Mouse
+set mouse=a
+
 " show folded docstrings
 "let g:SimpylFold_docstring_preview=1
 
@@ -177,3 +183,14 @@ set foldlevel=99
 "highlightin for python
 "let python_highlight_all=1
 "syntax on
+ " Interrupt any command running in the runner pane
+
+function! VimuxSlime()
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+ endfunction
+
+ " Select current selection and send it to tmux
+vmap <leader>vs "vy :call VimuxSlime()<CR>
+ " Select current paragraph and send it to tmux
+nmap <leader>vs vip<LocalLeader>vs<CR>
