@@ -18,12 +18,13 @@ Plugin 'jalvesaq/vimcmdline'
 Plugin 'davidhalter/jedi-vim'
 "for python
 "Plugin 'tmhedberg/SimpylFold'
-"Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
 "Bundles
 Bundle 'vim-scripts/guifontpp.vim'
 "python
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 "Bundle 'vim-scripts/Vim-R-plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -168,21 +169,23 @@ set mouse=a
 "maybe include the following only if issues with utf
 "set encoding=utf-8
 
-"define python interpreter
-"let g:python_host_prog='/usr/bin/python2.7'
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+"define python interpreter
+let g:python_host_prog='/home/karsten/miniconda3/bin/python'
 "python with virtualenv support
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 "highlightin for python
-"let python_highlight_all=1
-"syntax on
+let python_highlight_all=1
+syntax on
  " Interrupt any command running in the runner pane
 
 function! VimuxSlime()

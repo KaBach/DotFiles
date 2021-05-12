@@ -120,6 +120,7 @@ alias cftp='lftp -u jmlabadmin,Schrikslduun5 ftp2.cruk.cam.ac.uk'
 
 # added by Anaconda2 4.3.1 installer
 #export PATH="/home/karsten/anaconda2/bin:$PATH"
+export PATH="$PATH:/home/karsten/.local/bin"
 
 # added by Anaconda3 installer
 #export PATH="/home/karsten/anaconda3/bin:$PATH"
@@ -129,3 +130,19 @@ alias cftp='lftp -u jmlabadmin,Schrikslduun5 ftp2.cruk.cam.ac.uk'
 #export GOPATH=${HOME}/go
 #export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 #. /home/karsten/anaconda3/etc/profile.d/conda.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/karsten/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/karsten/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/karsten/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/karsten/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
