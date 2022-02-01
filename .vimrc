@@ -13,9 +13,13 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'benmills/vimux'
 Plugin 'jalvesaq/R-Vim-runtime'
-Plugin 'jalvesaq/Nvim-R'
+Plugin 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plugin 'jalvesaq/vimcmdline'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'szymonmaszke/vimpyter'
+"lugin 'vim-pandoc/vim-rmarkdown'
 "for python
 "Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
@@ -124,17 +128,27 @@ colorscheme wombat256
 " <Ctrl-l> redraws the screen and removes any search highlighting.
  nnoremap <silent> <C-l> :nohl<CR><C-l>
 
+" for vimpyter
+autocmd Filetype ipynb nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
+autocmd Filetype ipynb nmap <silent><Leader>j :VimpyterStartJupyter<CR>
+autocmd Filetype ipynb nmap <silent><Leader>n :VimpyterStartNteract<CR>
+
+
 " Set Max line length to 80 characters
 "set tw=80
 "
 "Allow R to run in a splitpane
-let R_in_buffer = 0
-let R_applescript = 0
-let R_tmux_split = 1
-let R_vsplit = 1
-let R_specialplot = 1
+"let R_in_buffer = 0
+"let R_applescript = 0
+"let R_tmux_split = 1
+"let R_vsplit = 1
+"let R_specialplot = 1
 let R_pdfviewer = "okular"
-
+"let R_external_term = 1
+"let R_applescript = 1
+"let R_in_buffer=0
+"let R_tmux_split=1
+let R_source='~/.config/nvim/tmux_split.vim'
 set backspace=indent,eol,start
 
 "all the following is for python setup copied from real python
@@ -168,6 +182,20 @@ set mouse=a
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 "maybe include the following only if issues with utf
 "set encoding=utf-8
+"
+let g:markdown_fenced_languages = ['r', 'python']
+let g:rmd_fenced_languages = ['r', 'python']
+
+" for markdown highlighting
+" configuration for vim-pandoc and vim-rmarkdown
+let g:pandoc#modules#disabled = ["folding", "spell"]
+let g:pandoc#syntax#conceal#use = 0
+
+" R output is highlighted with current colorscheme
+let g:rout_follow_colorscheme = 1
+
+" R commands in R output are highlighted
+let g:Rout_more_colors = 1
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
