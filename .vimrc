@@ -15,20 +15,24 @@ Plugin 'benmills/vimux'
 Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plugin 'jalvesaq/vimcmdline'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'szymonmaszke/vimpyter'
+"Plugin 'szymonmaszke/vimpyter'
 "lugin 'vim-pandoc/vim-rmarkdown'
 "for python
 "Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
+"Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'jiangmiao/auto-pairs'
 "Bundles
 Bundle 'vim-scripts/guifontpp.vim'
 "python
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 "Bundle 'vim-scripts/Vim-R-plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -128,11 +132,6 @@ colorscheme wombat256
 " <Ctrl-l> redraws the screen and removes any search highlighting.
  nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" for vimpyter
-autocmd Filetype ipynb nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
-autocmd Filetype ipynb nmap <silent><Leader>j :VimpyterStartJupyter<CR>
-autocmd Filetype ipynb nmap <silent><Leader>n :VimpyterStartNteract<CR>
-
 
 " Set Max line length to 80 characters
 "set tw=80
@@ -153,10 +152,10 @@ set backspace=indent,eol,start
 
 "all the following is for python setup copied from real python
 "split naviatgion control + vim navigator for lines
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
 "nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-H> <C-W><C-H>
 
 " Enable folding
 set foldmethod=indent
@@ -225,3 +224,38 @@ function! VimuxSlime()
 vmap <leader>vs "vy :call VimuxSlime()<CR>
  " Select current paragraph and send it to tmux
 nmap <leader>vs vip<LocalLeader>vs<CR>
+
+"Some Coc stuff
+" Code action on <leader>a
+vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+nmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+
+" Format action on <leader>f
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Goto definition
+nmap <silent> gd <Plug>(coc-definition)
+" Open definition in a split window
+nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
+
+"NerdTree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
+
+" Split windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+"COC stuff
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
