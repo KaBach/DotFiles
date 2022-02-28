@@ -16,12 +16,12 @@ Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plugin 'jalvesaq/vimcmdline'
 "Plugin 'davidhalter/jedi-vim'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vim-pandoc/vim-pandoc'
+"Plugin 'vim-pandoc/vim-pandoc-syntax'
+"Plugin 'vim-pandoc/vim-pandoc'
 "Plugin 'szymonmaszke/vimpyter'
-"lugin 'vim-pandoc/vim-rmarkdown'
+"Plugin 'vim-pandoc/vim-rmarkdown'
 "for python
-"Plugin 'tmhedberg/SimpylFold'
+"Plugin 'tmhedberg/SimplyFold'
 "Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'scrooloose/syntastic'
 "Plugin 'nvie/vim-flake8'
@@ -184,11 +184,6 @@ set mouse=a
 "
 let g:markdown_fenced_languages = ['r', 'python']
 let g:rmd_fenced_languages = ['r', 'python']
-
-" for markdown highlighting
-" configuration for vim-pandoc and vim-rmarkdown
-let g:pandoc#modules#disabled = ["folding", "spell"]
-let g:pandoc#syntax#conceal#use = 0
 
 " R output is highlighted with current colorscheme
 let g:rout_follow_colorscheme = 1
