@@ -15,6 +15,7 @@ Plugin 'benmills/vimux'
 Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plugin 'jalvesaq/vimcmdline'
+Plugin 'untitled-ai/jupyter_ascending.vim'
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'vim-pandoc/vim-pandoc'
@@ -254,3 +255,8 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+" Show suggestions as
+" <leader>aap for current paragraph
+" <leader>aw for current word
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
