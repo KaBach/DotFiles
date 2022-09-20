@@ -148,7 +148,7 @@ let R_pdfviewer = "okular"
 "let R_applescript = 1
 "let R_in_buffer=0
 "let R_tmux_split=1
-let R_source='~/.config/nvim/tmux_split.vim'
+"let R_source='~/.config/nvim/tmux_split.vim'
 set backspace=indent,eol,start
 
 "all the following is for python setup copied from real python
