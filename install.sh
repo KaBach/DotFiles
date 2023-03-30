@@ -1,0 +1,1 @@
+./stow --verbose tmux/ nvim/
