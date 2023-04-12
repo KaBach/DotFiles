@@ -1,6 +1,12 @@
 vim.g.markdown_fenced_languages = { 'html', 'python', 'bash=sh', 'R=r' }
 vim.opt.termguicolors = true
 
+-- from Javalseq Nvim-R/Rmarkdown stuff
+vim.g.rmd_fenced_languages = { 'python', 'R=r' }
+vim.g.rout_follow_colorscheme = 1
+vim.g.Rout_more_colors = 1
+vim.o.syntax = 'on'
+
 -- more opinionated
 vim.opt.number = true -- show linenumbers
 vim.opt.timeoutlen = 400 -- until which-key pops up
@@ -47,7 +53,7 @@ vim.opt.laststatus = 3
 
 -- split right and below by default
 vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.opt.splitbelow = false
 
 --tabline
 vim.opt.showtabline = 1

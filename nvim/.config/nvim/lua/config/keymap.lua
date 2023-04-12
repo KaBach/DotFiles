@@ -87,6 +87,10 @@ imap('<s-cr>', '<esc><Plug>SlimeSendCell<cr>i')
 vmap('<cr>', '<Plug>SlimeRegionSend')
 nmap('<leader><cr>', '<Plug>SlimeSendCell')
 
+-- send code with space (from javalseq)
+vmap('<Space>', '<Plug>RDSendSelection')
+nmap('<Space>', '<Plug>RDSendLine')
+
 -- list hidden buffers
 nmap('<leader>ls', ':ls!<cr>')
 nmap('<leader>vh', ':execute "h " . expand("<cword>")<cr>')
