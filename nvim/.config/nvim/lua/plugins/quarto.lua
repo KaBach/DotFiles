@@ -103,7 +103,7 @@ return {
   {
     'jalvesaq/Nvim-R'
   },
-  {
-    'jalvesaq/R-Vim-runtime'
-  },
+--  {
+--   'jalvesaq/R-Vim-runtime'
+--},
 }

@@ -9,3 +9,5 @@ For issue with node on the HPC use nvm to manage versions.. And don't install ya
 A lot is copied from the quarto-nvim setup right now. It requires the additional external dependencies for the telescope app:
 https://github.com/sharkdp/fd
 https://github.com/BurntSushi/ripgrep
+
+Also requires pyright for the lsp, not.. You're installlinng all of them through mason

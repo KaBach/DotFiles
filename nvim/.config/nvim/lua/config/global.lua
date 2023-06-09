@@ -23,7 +23,7 @@ vim.opt.tabstop = tabsize
 
 -- comma as leader
 vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = ";"
 
 -- smarter search
 vim.opt.ignorecase = true
