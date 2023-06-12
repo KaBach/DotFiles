@@ -57,7 +57,7 @@ return {
       require 'quarto'.setup {
         lspFeatures = {
           enabled = true,
-          languages = { 'r', 'python', 'julia', 'bash' },
+          languages = { 'r', 'python', 'bash' },
           chunks = 'curly', -- 'curly' or 'all'
           diagnostics = {
             enabled = true,
@@ -89,16 +89,16 @@ return {
   },
   -- paste an image to markdown from the clipboard
   -- :PasteImg,
-  'ekickx/clipboard-image.nvim',
+  --'ekickx/clipboard-image.nvim',
 
   -- display images in the terminal!
-  { 'edluffy/hologram.nvim',
-    config = function()
+--  { 'edluffy/hologram.nvim',
+ --   config = function()
       -- require'hologram'.setup{
       --   auto_display = true
       -- }
-    end
-  },
+  --  end
+--  },
   --Added the jalvesaq packages as I prefer the keybindings here
   {
     'jalvesaq/Nvim-R'

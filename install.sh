@@ -1,1 +1,1 @@
-./stow --verbose tmux/ nvim/ git/
+stow --verbose tmux/ nvim/ git/

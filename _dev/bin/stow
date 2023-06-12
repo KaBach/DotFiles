@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/cluster/project/moor/kabach/miniconda3/bin/perl
 
 # GNU Stow - manage farms of symbolic links
 # Copyright (C) 1993, 1994, 1995, 1996 by Bob Glickstein
@@ -459,7 +459,7 @@ use POSIX qw(getcwd);
 use Getopt::Long qw(GetOptionsFromArray);
 use Scalar::Util qw(reftype);
 
-use lib "/usr/local//Library/Perl/5.30";
+use lib "/usr/local//cluster/project/moor/kabach/miniconda3/lib/perl5/site_perl";
 use Stow;
 use Stow::Util qw(parent error);
 
