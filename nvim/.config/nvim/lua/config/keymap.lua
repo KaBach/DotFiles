@@ -78,18 +78,18 @@ nmap('Q', '<Nop>')
 -- needs kitty (or other terminal) config:
 -- map shift+enter send_text all \x1b[13;2u
 -- map ctrl+enter send_text all \x1b[13;5u
-nmap('<c-cr>', '<Plug>SlimeSendCell')
+nmap('<leader>cc', '<Plug>SlimeSendCell')
 nmap('<s-cr>', '<Plug>SlimeSendCell')
 imap('<c-cr>', '<esc><Plug>SlimeSendCell<cr>i')
 imap('<s-cr>', '<esc><Plug>SlimeSendCell<cr>i')
 
--- send code with Enter and leader Enter
-vmap('<cr>', '<Plug>SlimeRegionSend')
-nmap('<leader><cr>', '<Plug>SlimeSendCell')
+-- send code with Space
+nmap('<Space>', '<cmd>SlimeSendCurrentLine<cr>j')
+vmap('<Space>', '<Plug>SlimeRegionSend<cr>j')
 
 -- send code with space (from javalseq)
-vmap('<Space>', '<Plug>RDSendSelection')
-nmap('<Space>', '<Plug>RDSendLine')
+vmap('<localleader><Space>', '<Plug>RDSendSelection')
+nmap('<localleader><Space>', '<Plug>RDSendLine')
 
 -- list hidden buffers
 nmap('<leader>ls', ':ls!<cr>')
