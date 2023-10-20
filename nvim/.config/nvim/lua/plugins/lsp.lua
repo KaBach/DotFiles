@@ -214,7 +214,7 @@ return {
           python = {
             analysis = {
               autoSearchPaths = true,
-              useLibraryCodeForTypes = true,
+              useLibraryCodeForTypes = true, -- This has to be true makes it maybe slower but otherwise doesn't find many things
               diagnosticMode = 'openFilesOnly',
             },
           },

@@ -167,8 +167,8 @@ wk.register(
       r = {  ':split term://R<cr>', 'new R terminal' },
       p = {  ':split term://python<cr>', 'new python terminal' },
       i = {  ':split term://ipython<cr>', 'new ipython terminal' },
-      j = {  ':split term://julia<cr>', 'new julia terminal' },
-      s = {  ':echo b:terminal_job_id<cr>', 'show terminal id' },
+      j = {  ':split term://julia<cr>', 'new julia terminal' }
+--      s = {  ':echo b:terminal_job_id<cr>', 'show terminal id' },
     },
     v = {
       name = 'vim',
