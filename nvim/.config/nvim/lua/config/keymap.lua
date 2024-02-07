@@ -95,6 +95,12 @@ nmap('<localleader><Space>', '<Plug>RDSendLine')
 nmap('<leader>ls', ':ls!<cr>')
 nmap('<leader>vh', ':execute "h " . expand("<cword>")<cr>')
 
+-- switch between buffers
+nmap('<leader>b', ':buffers<CR>:buffer<Space>')
+nmap('[b', ':bprev<CR>')
+nmap(']b', ':bnext<CR>')
+
+
 -- source entire file
 nmap('<leader>xx', ':w<cr>:source %<cr>')
 
