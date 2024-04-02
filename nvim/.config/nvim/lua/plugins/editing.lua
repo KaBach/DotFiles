@@ -21,6 +21,7 @@ return {
 		end,
 	},
   { 'tpope/vim-repeat' },
+  { 'raivivek/vim-snakemake' },
   { 'tpope/vim-surround' },
   -- commenting with e.g. `gcc` or `gcip`
   -- respects TS, so it works in quarto documents
