@@ -360,5 +360,23 @@
     "body": "Fig. \\ref{fig-$1}",
     "description": "refer to a label for a wrap figure",
     "prefix": "@wrap"
+  },
+   "ggpoint" : {
+     "body" : [
+       "ggplot($1, aes(x=$2, y=$3, color=$4)) +",
+       "geom_point() +",
+       "ggtitle($5)"
+   ],
+   "description" : "Add ggplot basic point plot",
+   "prefix" : "ggpoint"
+  },
+   "ggpbox" : {
+     "body" : [
+       "ggplot($1, aes(x=$2, y=$3, fill=$4)) +",
+       "geom_boxplot() +",
+       "ggtitle($5)"
+   ],
+   "description" : "Add ggplot basic boxplot",
+   "prefix" : "ggpbox"
   }
 }
