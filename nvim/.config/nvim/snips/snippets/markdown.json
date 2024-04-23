@@ -378,5 +378,14 @@
    ],
    "description" : "Add ggplot basic boxplot",
    "prefix" : "ggpbox"
+  },
+   "fcw" : {
+     "body" : [
+       "#| fig.cap: '$1'",
+       "#| fig.width: $2",
+       "#| fig.height: $3"
+   ],
+   "description" : "Add basic figure options",
+   "prefix" : "fcw"
   }
 }
