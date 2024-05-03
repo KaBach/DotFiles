@@ -178,7 +178,7 @@ return {
       local lua_plugin_paths = {}
       table.insert(lua_plugin_paths, resource_path .. '/lua-plugin/plugin.lua')
 
-      lspconfig.sumneko_lua.setup {
+      lspconfig.lua_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
         flags = lsp_flags,
