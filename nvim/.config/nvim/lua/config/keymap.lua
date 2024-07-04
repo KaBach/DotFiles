@@ -128,6 +128,10 @@ end
 vmap('>', '>gv')
 vmap('<', '<gv')
 
+-- send code with space (from javalseq)
+vmap('<Space>', '<Plug>RDSendSelection')
+nmap('<Space>', '<Plug>RDSendLine')
+
 -- center after search and jumps
 nmap('n', 'nzz')
 nmap('<c-d>', '<c-d>zz')

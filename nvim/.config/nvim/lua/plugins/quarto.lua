@@ -128,7 +128,9 @@ return {
       { '<leader>qm', ':lua require"nabla".toggle_virt()<cr>', desc = 'toggle [m]ath equations' },
     },
   },
-
+  {
+    'jalvesaq/Nvim-R'
+  },
   {
     'benlubas/molten-nvim',
     enabled = false,

@@ -11,6 +11,12 @@ vim.api.nvim_set_hl(0, 'TermCursor', { fg = '#A6E3A1', bg = '#A6E3A1' })
 -- disable fill chars (the ~ after the buffer)
 vim.o.fillchars = 'eob: '
 
+-- from Javalseq Nvim-R/Rmarkdown stuff
+vim.g.rmd_fenced_languages = { 'python', 'R=r' }
+vim.g.rout_follow_colorscheme = 1
+vim.g.Rout_more_colors = 1
+vim.o.syntax = 'on'
+
 -- more opinionated
 vim.opt.number = true -- show linenumbers
 vim.opt.mouse = 'a' -- enable mouse
@@ -33,8 +39,8 @@ vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
 
 -- space as leader
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = ','
+vim.g.maplocalleader = ';'
 
 -- smarter search
 vim.opt.ignorecase = true
@@ -83,7 +89,7 @@ vim.opt.cmdheight = 1
 
 -- split right and below by default
 vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.opt.splitbelow = false
 
 --tabline
 vim.opt.showtabline = 1

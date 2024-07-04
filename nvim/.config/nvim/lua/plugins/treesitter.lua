@@ -24,7 +24,7 @@ return {
           'vim',
           'query',
           'vimdoc',
-          'latex', -- requires tree-sitter-cli (installed automatically via Mason)
+--          'latex', -- requires tree-sitter-cli (installed automatically via Mason, requires glibc2.9 which I don't have at the sHPC)
           'html',
           'css',
           'dot',
