@@ -7,6 +7,7 @@ return {
       { 'nvim-telescope/telescope-ui-select.nvim' },
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
       { 'nvim-telescope/telescope-dap.nvim' },
+      { 'mfussenegger/nvim-dap'},
       {
         'jmbuhr/telescope-zotero.nvim',
         enabled = true,
