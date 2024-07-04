@@ -129,7 +129,8 @@ return {
     },
   },
   {
-    'jalvesaq/Nvim-R'
+    "R-nvim/R.nvim",
+    lazy = false
   },
   {
     'benlubas/molten-nvim',
