@@ -130,7 +130,8 @@ return {
   },
   {
     "R-nvim/R.nvim",
-    lazy = false
+    lazy = false,
+    opts = {assignment_keymap="_"}
   },
   {
     'benlubas/molten-nvim',
