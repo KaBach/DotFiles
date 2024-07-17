@@ -46,6 +46,11 @@ imap(',', ',<c-g>u')
 imap('.', '.<c-g>u')
 imap(';', ';<c-g>u')
 
+-- switch between buffers
+nmap('<leader>b', ':buffers<CR>:buffer<Space>')
+nmap('[b', ':bprev<CR>')
+nmap(']b', ':bnext<CR>')
+
 nmap('Q', '<Nop>')
 
 --- Send code to terminal with vim-slime
