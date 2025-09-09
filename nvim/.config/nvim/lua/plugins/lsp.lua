@@ -179,7 +179,7 @@ return {
         flags = lsp_flags,
       }
 
-      lspconfig.tsserver.setup {
+      lspconfig.ts_ls.setup {
         capabilities = capabilities,
         flags = lsp_flags,
         filetypes = { 'js', 'javascript', 'typescript', 'ojs' },
