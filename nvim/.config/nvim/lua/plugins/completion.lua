@@ -124,6 +124,7 @@ return {
           -- { name = 'otter' }, -- for code chunks in quarto
           { name = 'path' },
           { name = 'nvim_lsp_signature_help' },
+--          { name = 'copilot', group_index = 2},
           { name = 'nvim_lsp' },
           { name = 'luasnip', keyword_length = 3, max_item_count = 3 },
           { name = 'pandoc_references' },
@@ -160,20 +161,20 @@ return {
     config = function()
       require('copilot').setup {
         suggestion = {
-          enabled = true,
+          enabled = true, -- Turn off and enable coplitop cmp in case you want that
           auto_trigger = true,
           debounce = 75,
           keymap = {
-            accept = '<c-a>',
+            accept = '<M-a>',
             accept_word = false,
             accept_line = false,
             next = '<M-]>',
             prev = '<M-[>',
-            dismiss = '<C-]>',
+            dismiss = '<M-j>',
           },
         },
         panel = { enabled = false },
       }
     end,
-  },
+  }
 }
