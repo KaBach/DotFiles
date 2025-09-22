@@ -10,6 +10,9 @@ A lot is copied from the quarto-nvim setup right now. It requires the additional
 https://github.com/sharkdp/fd
 https://github.com/BurntSushi/ripgrep
 
+# TMUX setup
+Recently changed to tpm for plugin management (might get deprecated, yai). Needs separate [installation](https://github.com/tmux-plugins/tpm)
+
 # Stow
 Installation straight forward on personal (root) machine, for non-root system see:
 
