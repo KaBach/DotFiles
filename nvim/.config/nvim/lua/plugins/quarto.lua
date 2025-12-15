@@ -130,7 +130,19 @@ return {
   },
   {
     "R-nvim/R.nvim",
-    lazy = false
+    lazy = false,
+    opts = {
+       r_ls = { -- these are the deafult options, modify as needed
+          completion = true, -- enable the completion provider
+          hover = true,      -- enable the hover provider
+          signature = true,  -- enable the signature help provider
+          doc_width = 0,
+          fun_data_1 = { "select", "rename", "mutate", "filter" },
+          fun_data_2 = { ggplot = { "aes" }, with = { "*" } },
+          fun_data_formula = { ggplot = { "facet_wrap", "facet_grid", "vars" } },
+          quarto_intel = nil,
+     },
+    },
   },
   {
     'benlubas/molten-nvim',

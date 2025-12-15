@@ -9,6 +9,11 @@ return {
     },
     run = ':TSUpdate',
     config = function()
+      -- Force local compilation instead of using prebuilt binaries
+      local ts_install = require('nvim-treesitter.install')
+      ts_install.compilers = { 'gcc' }   -- or {'gcc', 'clang'} if you have both
+      ts_install.prefer_git = true       -- use git to fetch grammars, then build locally
+
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
         auto_install = true,
@@ -24,7 +29,7 @@ return {
           'vim',
           'query',
           'vimdoc',
---          'latex', -- requires tree-sitter-cli (installed automatically via Mason, requires glibc2.9 which I don't have at the sHPC)
+          -- 'latex', -- requires tree-sitter-cli (installed automatically via Mason, requires glibc2.9 which I don't have at the sHPC)
           'html',
           'css',
           'dot',
@@ -54,7 +59,6 @@ return {
             enable = true,
             lookahead = true,
             keymaps = {
-              -- You can use the capture groups defined in textobjects.scm
               ['af'] = '@function.outer',
               ['if'] = '@function.inner',
               ['ac'] = '@class.outer',
@@ -63,7 +67,7 @@ return {
           },
           move = {
             enable = true,
-            set_jumps = true, -- whether to set jumps in the jumplist
+            set_jumps = true,
             goto_next_start = {
               [']m'] = '@function.outer',
               [']]'] = '@class.inner',
